@@ -1,0 +1,9 @@
+# PUEDE ENTRAR A LA PISCINA SOLO SI ES MAYOR DE 14 AÑOS y MENOR DE 66
+
+edad = int(input("INGRESE SU EDAD POR FAVOR: "))
+
+
+if 15 <= edad <= 65:
+    print("PUEDE ENTRAR A LA PSCINA")
+else:
+    print("NO PUEDES INGRESAR A LA PSCINA")
