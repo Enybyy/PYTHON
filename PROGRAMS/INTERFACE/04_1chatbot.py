@@ -6,8 +6,9 @@ from openai import OpenAI
 api_key = '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'
 client = OpenAI(api_key=api_key)
 
-# Configurar la clave de la API
 input_text = "Eres un robot erudito"
+
+# DEFINIR FUNCION OBTENER RESPUESTA
 
 
 def get_response():
@@ -25,18 +26,18 @@ def get_response():
         chat_history.insert(tk.END, "Error: " + str(e) + "\n")
     user_input_text.delete("1.0", tk.END)
 
-# Crear función para manejar el evento de presionar Enter
+# FUNCION ENTER
 
 
 def on_enter(event):
     get_response()
 
 
-# Crear ventana principal
+# CREAR VENTANA
 root = tk.Tk()
 root.title("Chatbot - Robot Erudito")
 
-# Crear widgets
+# CCREAR WITGEATS
 chat_history = scrolledtext.ScrolledText(root, width=50, height=20)
 user_input_text = tk.Text(root, width=50, height=3)
 send_button = tk.Button(root, text="Enviar", command=get_response)
@@ -44,10 +45,10 @@ send_button = tk.Button(root, text="Enviar", command=get_response)
 # Asociar la función on_enter al evento de presionar Enter
 user_input_text.bind("<Return>", on_enter)
 
-# Colocar widgets en la ventana
+# COLOCAR WITGEATS EN WINDS
 chat_history.pack()
 user_input_text.pack()
 send_button.pack()
 
-# Iniciar el bucle principal de la aplicación
+# INICIAR LOOP
 root.mainloop()
