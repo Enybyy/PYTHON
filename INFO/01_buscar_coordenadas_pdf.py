@@ -20,7 +20,6 @@ for page_layout in extract_pages(pdf_file):
 
             # Recorrer cada carácter del texto
             for text_line in element:
-
                 for character in text_line:
 
                     # Si el carácter es una letra
