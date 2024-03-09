@@ -42,7 +42,7 @@ chat_history = scrolledtext.ScrolledText(root, width=50, height=20)
 user_input_text = tk.Text(root, width=50, height=3)
 send_button = tk.Button(root, text="Enviar", command=get_response)
 
-# Asociar la función on_enter al evento de presionar Enter
+# ASOCIAR FUN ENTER
 user_input_text.bind("<Return>", on_enter)
 
 # COLOCAR WITGEATS EN WINDS
