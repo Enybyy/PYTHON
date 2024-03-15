@@ -3,7 +3,7 @@ from tkinter import scrolledtext
 from openai import OpenAI
 
 # INGRESAR APIKEY
-# INGRESAR API KEY
+api_key = ''
 client = OpenAI(api_key=api_key)
 
 input_text = "Eres un robot erudito"
