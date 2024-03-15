@@ -1,49 +1,28 @@
 # IMPORTAR LIBRERIAS
-import time
 from docx import Document
-from FUNCTIONS.buscar_excel_02 import read_excel_data
-
-start_time = time.time()
-
-# Guardar el tiempo de inicio
-
-print("INICIANDO...")
+import pandas as pd
 
 # ABRIR .DOCX
 doc = Document(
-    'C:/Users/EVENTOS/Desktop/PYTHON/TEST_ARCH/Format_contrato.docx')
-
-print("ACCEDIENDO A DB...\n")
-
-# ==========================EXCEL=============================== #
-
-# READ EXCEL
-archivo_excel = 'C:/Users/EVENTOS/Desktop/PYTHON/TEST_ARCH/Copia_de_2.1_IT_CORRESPONDENCIA_CONTRATO_RH.xlsx'
-columnas_requeridas = ['EMBAJADOR', 'N° DOC', 'DIRECCION', 'DISTRITO', 'CIUDAD',
-                       'CAMPAÑA', 'DURACIÓN', 'FECHA DE INICIO', 'FECHA DE FIN', 'REMUNERACIÓN']
-lista, time_01 = read_excel_data(archivo_excel, columnas_requeridas)
-# print(lista)
-# ==========================EXCEL=============================== #
-
-# INGRESAR DATOS A CAMBIAR
-number_doc = int(input(
-    "INGRESA EL NÚMERO DE DOCUMENTOS QUE DESEA MODIFICAR Y GENERAR: "))
-print("========= GENERANDO DOCUMENTOS =========\n")
+    'C:/Users/EVENTOS/Desktop/PROJECT_PYTHON/ARCHIVOS_LOCALES/Format_contrato.docx')
 
 # INICIAR LOOP
-for l in list(range(number_doc)):
+b_e_s = ""
+while b_e_s != "EXIT".lower():
 
-    # RECORRIENDO "list" PARA CAMBIAR DATOS
-    name = lista[l][0]
-    id = str(lista[l][1])
-    address = lista[l][2]
-    district = lista[l][3]
-    province = lista[l][4]
-    campaign = lista[l][5]
-    days = lista[l][6]
-    start_date = lista[l][7]
-    end_date = lista[l][8]
-    remuneration = lista[l][9]
+    # INGRESAR DATOS A CAMBIAR
+    print("========= INGRESAR DATOS A CAMBIAR =========\n")
+
+    name = input("INGRESAR EMBAJADOR: ")
+    id = input("INGRESAR DNI: ")
+    address = input("INGRESAR DIRECCIÓN: ")
+    district = input("INGRESAR DISTRITO: ")
+    province = input("INGRESAR CIUDAD: ")
+    campaign = input("INGRESAR CAMPAÑA: ")
+    days = input("INGRESAR DURACIÓN: ")
+    start_date = input("INGRESAR FECHA DE INICIO: ")
+    end_date = input("INGRESAR FECHA DE FIN: ")
+    remuneration = input("INGRESAR REMUNERACIÓN: ")
 
     # RECORRER CADA PARRAFO DEL DOC
     for text in doc.paragraphs:
@@ -58,7 +37,7 @@ for l in list(range(number_doc)):
             formatted_runs.append(formatted_run)
 
         if "CONTRATO" in run.text:
-            print(f"Documento {l+1}° .DOCX GENERADO")
+            print("GENERANDO .DOCX ...")
         # ELIMINAR DE LA CADENA "[NAME]" DEL PARRAFO
         text.clear()  # LIMPIAR EL CONTENIDO ORIGINAL DEL PARRAFO
         for run in formatted_runs:
@@ -116,19 +95,10 @@ for l in list(range(number_doc)):
         El texto '[END_DATE]' ha reemplzado por {end_date}.
         El texto '[REMUNERATION]' ha reemplzado por {remuneration}.
         """)
-try:
-    print("¡HECHO!")
-except Exception as e:
-    print(f"Error al guardar el documento: {e}")
 
-
-# Tu código aquí
-
-# Guardar el tiempo de finalización
-end_time = time.time()
-
-# Calcular la diferencia de tiempo en segundos
-elapsed_time = end_time - start_time + time_01
-
-# Imprimir el tiempo transcurrido en segundos
-print(f"Tiempo transcurrido: {round(elapsed_time, 1)} segundos")
+    # TERMINAR LOOP
+    b_e_s = input(
+        "Si desea agregar otros datos presione 'Enter', de lo contrario escriba 'EXIT': ")
+    if b_e_s == "EXIT":
+        print("Saliendo del programa...")
+        break

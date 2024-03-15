@@ -1,7 +1,7 @@
 import fitz  # IMPORTAR LIBRERIA "PyMuPDF"
 
 # INGRESAR RUTA  Y ABRIR EL ARCHIVO PDF
-pdf_file_path = "C:/Users/EVENTOS/Desktop/PYTHON/TEST_ARCH/HOLA_MUNDO.pdf"
+pdf_file_path = "C:/Users/EVENTOS/Desktop/PROJECT_PYTHON/ARCHIVOS_LOCALES/HOLA_MUNDO.pdf"
 pdf_document = fitz.open(pdf_file_path)
 
 # TEXTO A BUSCAR Y REMPLAZAR

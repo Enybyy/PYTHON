@@ -4,7 +4,7 @@ from TESTS.FUNCTIONS.swn_01 import save_words_n
 
 # Abrir el documento de Word
 doc = Document(
-    'C:/Users/EVENTOS/Desktop/PYTHON/TEST_ARCH/Format_contrato.docx')
+    'C:/Users/EVENTOS/Desktop/PROJECT_PYTHON/ARCHIVOS_LOCALES/Format_contrato.docx')
 
 # SALVAR STRING
 save_words_bl = save_words_n(doc)

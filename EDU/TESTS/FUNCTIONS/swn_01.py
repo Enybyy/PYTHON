@@ -29,7 +29,7 @@ def save_words_n(documento):
 if __name__ == "__main__":
     # Abrir el documento de Word
     doc = Document(
-        'C:/Users/EVENTOS/Desktop/PYTHON/TEST_ARCH/Format_contrato.docx')
+        'C:/Users/EVENTOS/Desktop/PROJECT_PYTHON/ARCHIVOS_LOCALES/Format_contrato.docx')
 
     # Obtener palabras en negrita del documento
     palabras_en_negrita = save_words_n(doc)

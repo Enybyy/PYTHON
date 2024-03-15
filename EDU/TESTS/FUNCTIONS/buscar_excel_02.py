@@ -38,7 +38,7 @@ def read_excel_data(ruta_archivo_excel, columnas_requeridas):
 
 
 # RUTA Y CULUMNAS REQUERIDAS
-archivo_excel = 'C:/Users/EVENTOS/Desktop/PYTHON/TEST_ARCH/Copia_de_2.1_IT_CORRESPONDENCIA_CONTRATO_RH.xlsx'
+archivo_excel = 'C:/Users/EVENTOS/Desktop/PROJECT_PYTHON/ARCHIVOS_LOCALES/Copia_de_2.1_IT_CORRESPONDENCIA_CONTRATO_RH.xlsx'
 columnas_requeridas = ['EMBAJADOR', 'N° DOC', 'DIRECCION', 'DISTRITO', 'CIUDAD',
                        'CAMPAÑA', 'DURACIÓN', 'FECHA DE INICIO', 'FECHA DE FIN', 'REMUNERACIÓN']
 

@@ -1,7 +1,7 @@
 import pandas as pd
 
 df = pd.read_excel(
-    "C:/Users/EVENTOS/Downloads/Trabajo_Abby/ANEXO_1_ADICIONAL.xlsx", index_col="N°", header=6)
+    "C:/Users/EVENTOS/Desktop/PROJECT_PYTHON/ARCHIVOS_LOCALES/ANEXO_1_ADICIONAL.xlsx", index_col="N°", header=6)
 
 df["NUMERO"].fillna(0, inplace=True)
 df["NUMERO"] = df["NUMERO"].astype(int)
