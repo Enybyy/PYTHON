@@ -5,7 +5,6 @@ import time
 import pandas as pd
 
 # RUTA DEL ARCHIVO CHROMEDRIVER
-# Usa barras inclinadas o dobles barras invertidas para la ruta de Windows
 path = 'C:/chromedriver/chromedriver-win64/chromedriver.exe'
 
 # INICIALIZAR SERVICIO DE GOOGLE CHROME
