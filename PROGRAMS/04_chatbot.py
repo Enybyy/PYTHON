@@ -1,7 +1,7 @@
 from openai import OpenAI
 
 # INGRESAR APIKEY
-api_key = ''
+# INGREASR KEY
 client = OpenAI(api_key=api_key)
 
 # CONFIGURAR LA CLAVE DE LA API
