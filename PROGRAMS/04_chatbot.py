@@ -1,7 +1,8 @@
 from openai import OpenAI
 
 # INGRESAR APIKEY
-# INGRESAR API
+api_key = 'YUOR KEY'
+client = OpenAI(api_key=api_key)
 
 # CONFIGURAR LA CLAVE DE LA API
 
