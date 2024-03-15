@@ -117,6 +117,7 @@ def update_table(df_fix_1, df_fix_2):
     return df_fix_2
 
 
+# IMPRIMIR PREDICTIONS
 print("OCTAVOS DE FINAL")
 print(get_winner(df_wc2022_knockout), "\n CUARTOS DE FINAL")
 update_table(df_wc2022_knockout, df_wc2022_quater)
